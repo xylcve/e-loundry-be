@@ -8,7 +8,10 @@ const dbPool = mysql.createPool({
     database: process.env.MYSQL_DB,
     port: process.env.MYSQL_PORT,
     namedPlaceholders: true,
-    decimalNumbers: true
+    decimalNumbers: true,
+     ssl: {
+    rejectUnauthorized: true,
+  },
 })
 
 module.exports = { dbPool }
