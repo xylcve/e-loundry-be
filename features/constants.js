@@ -1,0 +1,21 @@
+const MAX_WASH_COUNT = 100
+const NOTIF_DAYS_LIMIT = 3
+
+const WASHING_STATUS = Object.freeze({
+    OUT_ROOM: 'out_room',
+    IN_LAUNDRY: 'in_laundry',
+    OUT_LAUNDRY: 'out_laundry',
+    IN_ROOM: 'in_room'
+})
+
+const WASHING_RESULT = Object.freeze({
+    SUCCESS: 'SUCCESS',
+    RFID_NOT_FOUND: 'RFID_NOT_FOUND',
+    LINEN_INACTIVE: 'LINEN_INACTIVE',
+    WASH_LIMIT_REACHED: 'WASH_LIMIT_REACHED',
+    INVALID_PROCESS: 'INVALID_PROCESS',
+    DB_FAILURE: 'DB_FAILURE',
+    UNKNOWN_ERROR: 'UNKNOWN_ERROR'
+})
+
+module.exports = { MAX_WASH_COUNT, NOTIF_DAYS_LIMIT, WASHING_STATUS, WASHING_RESULT }
